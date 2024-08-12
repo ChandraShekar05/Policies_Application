@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "9a50a0e3-712c-4498-9c24-e09b350cf62d",
+		"name": "Hackathon - CRUD - 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37422415"
+	},
+	"item": [
+		{
+			"name": "fetchAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/policies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"policies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPolicyById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/policies/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"policies",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"policy_number\": \"PN123469\",\r\n    \"insured_party\": \"Augustus\",\r\n    \"coverage_type\": \"Life\",\r\n    \"start_date\": \"2023-01-31\",\r\n    \"end_date\": \"2025-01-30\",\r\n    \"premium_amount\": \"1500.00\",\r\n    \"status\": \"Active\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/policies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"policies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"policy_number\": \"PN123469\",\r\n    \"insured_party\": \"April Young\",\r\n    \"coverage_type\": \"Life\",\r\n    \"start_date\": \"2023-01-30\",\r\n    \"end_date\": \"2028-01-29\",\r\n    \"premium_amount\": \"1800.00\",\r\n    \"status\": \"Active\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/policies/15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"policies",
+						"15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/policies/15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"policies",
+						"15"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

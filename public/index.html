@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Policy Management</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <h1>Policy Details</h1>
+    <table id="policyTable">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Policy Number</th>
+                <th>Insured Party</th>
+                <th>Coverage Type</th>
+                <th>Policy Start Date</th>
+                <th>Policy End Date</th>
+                <th>Premium Amount</th>
+                <th>Policy Status</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <h2>Create Policy</h2>
+    <form id="createPolicyForm">
+        <input type="text" id="policyNumber" placeholder="Policy Number" required>
+        <input type="text" id="insuredParty" placeholder="Insured Party" required>
+        <input type="text" id="coverageType" placeholder="Coverage Type" required>
+        <input type="date" id="policyStartDate" required>
+        <input type="date" id="policyEndDate" required>
+        <input type="number" id="premiumAmount" placeholder="Premium Amount" required>
+        <input type="text" id="policyStatus" placeholder="Policy Status" required>
+        <button type="submit">Create Policy</button>
+    </form>
+
+    <h2>Update Policy</h2>
+    <form id="updatePolicyForm">
+        <input type="number" id="id" placeholder="id" required>
+        <input type="text" id="update_policyNumber" placeholder="Policy Number" required>
+        <input type="text" id="update_insuredParty" placeholder="Insured Party" required>
+        <input type="text" id="update_coverageType" placeholder="Coverage Type" required>
+        <input type="date" id="update_policyStartDate" required>
+        <input type="date" id="update_policyEndDate" required>
+        <input type="number" id="update_premiumAmount" placeholder="Premium Amount" required>
+        <input type="text" id="update_policyStatus" placeholder="Policy Status" required>
+        <button type="submit">Update Policy</button>
+    </form>
+
+    <h2>Delete Policy</h2>
+    <form id="deletePolicyForm">
+        <input type="number" id="delete_id" placeholder="Id" required>
+        <button type="submit">Delete Policy</button>
+    </form>
+
+    <h2>Get Policy By Id</h2>
+    <form id="getPolicyDetailsForm">
+        <input type="number" id="get_id" placeholder="Id" required>
+        <button type="submit">Get Policy Details</button>
+    </form>
+    <div id="policyDetails" class="policy-details"></div>
+    <script src="./script.js"></script>
+</body>
+</html>
